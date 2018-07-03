@@ -5,17 +5,19 @@ class BudgetSerializer(serializers.ModelSerializer):
 	"""Serializer for Budget Model"""
 	class Meta:
 		model = Budget
-		fields = ('balance', 'save_percentage')
+		fields = ('balance', 'save_percentage', 'user')
 		
 
 class ExpenseSerializer(serializers.ModelSerializer):
 	"""Serializer for Expense model"""
 	class Meta:
 		model = Expense
-		fields = ('name', 'description', 'cost', 'budget')
+		fields = ('name', 'description', 'cost', 'budget', 'user')
 
 class IncomeSerializer(serializers.ModelSerializer):
 	"""Serializer for Income model"""
 	class Meta:
 		model = Income
-		fields = ('name', 'salary', 'hours', 'pay', 'budget')
+		fields = ('name', 'salary', 'hours', 'pay', 'budget', 'user')
+
+		
