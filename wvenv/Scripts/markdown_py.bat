@@ -1,0 +1,1 @@
+@"c:\webprojects\budget\wvenv\scripts\python.exe" "c:\webprojects\budget\wvenv\Scripts\markdown_py" %*
