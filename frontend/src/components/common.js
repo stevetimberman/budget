@@ -114,7 +114,7 @@ const CommonComponents = {
 
 	AppBarBasic: function AppBarBasic(props) {
 		return (
-			<AppBar position='static'>
+			<AppBar >
 				<Toolbar>
 					{props.children}
 				</Toolbar>

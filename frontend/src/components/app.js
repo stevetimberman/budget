@@ -7,8 +7,12 @@ import Grid from '@material-ui/core/Grid';
 export default () => {
 	return (
 		<div>
-			<Grid item sm={12}><Navbar /></Grid> 
+			<Grid container spacing={24}> 
+				<Grid item sm={12}><Navbar /></Grid>
+			</Grid>
+			<Grid container spacing={24}>
+			<Grid item sm={12}><Sidebar /></Grid>
+			</Grid>
 		</div>
-	)
-		;
+	);
 }
