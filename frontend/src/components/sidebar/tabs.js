@@ -4,16 +4,16 @@ import CommonComponents from '../common'
 
 function Tabs(props) {
 	return (
-		<div>
-		<CommonComponents.AppBarBasic>
-			<CommonComponents.TabsBasic>
+		
+			<CommonComponents.AppBarBasic>
+				<CommonComponents.TabsBasic>
 				
-				<CommonComponents.TabBasic label="Expenses"/>
-				<CommonComponents.TabBasic label="Income"/>
+					<CommonComponents.TabBasic label="Expenses"/>
+					<CommonComponents.TabBasic label="Income"/>
 				
-			</CommonComponents.TabsBasic>
-		</CommonComponents.AppBarBasic>
-		</div>
+				</CommonComponents.TabsBasic>
+			</CommonComponents.AppBarBasic>
+		
 		)
 }
 
