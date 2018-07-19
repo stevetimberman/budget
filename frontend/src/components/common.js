@@ -41,7 +41,7 @@ const CommonComponents = {
 
 	ContainedButton: function ContainedButton(props) {
 		return (
-			<Button variant="contained" color={props.color} disabled={props.disabled}>
+			<Button variant="contained" color={props.color} disabled={props.disabled} type={props.type}>
 				{props.children}
       		</Button>
 		)
@@ -63,6 +63,7 @@ const CommonComponents = {
           label={props.label}
           required={props.required}
           type={props.type}
+          input={props.input}
           fullWidth={props.fullWidth}
           helperText={props.helperText}
           multiline={props.multiline}
@@ -114,7 +115,7 @@ const CommonComponents = {
 
 	AppBarBasic: function AppBarBasic(props) {
 		return (
-			<AppBar >
+			<AppBar position="static">
 				<Toolbar>
 					{props.children}
 				</Toolbar>

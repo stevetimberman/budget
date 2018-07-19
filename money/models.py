@@ -15,7 +15,7 @@ class Expense(models.Model):
 	description = models.CharField(max_length=100, null=True, blank=True)
 	cost = models.DecimalField(max_digits=10, decimal_places=2)
 	budget = models.ForeignKey(Budget, on_delete=models.CASCADE)
-	user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='expense', null=True)
+	user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='expenses', null=True)
 
 
 class Income(models.Model):
@@ -25,6 +25,6 @@ class Income(models.Model):
 	hours = models.IntegerField(default=0)
 	pay = models.DecimalField(max_digits=10, decimal_places=2)
 	budget = models.ForeignKey(Budget, on_delete=models.CASCADE)
-	user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='income', null=True)
+	user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='incomes', null=True)
 
 

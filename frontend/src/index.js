@@ -9,7 +9,10 @@ import App from './components/app';
 import allReducers from './reducers';
 
 const store = createStore(
-	allReducers,
+	allReducers, 
+	{
+		authReducer: {authenticated : localStorage.getItem('token') }
+	},
 	compose(
 		applyMiddleware(thunk)
 	)
