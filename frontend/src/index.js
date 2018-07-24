@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import { render } from "react-dom";
 import {Provider} from 'react-redux';
 import {createStore,compose,applyMiddleware,} from 'redux';
-import thunk from "redux-thunk";
+import reduxThunk from "redux-thunk";
+import { BrowserRouter, Route } from 'react-router-dom'
+import Login from './containers/auth/login';
+import LoggedIn from './containers/auth/logged-in';
+import LoggedOut from './containers/auth/logged-out';
 
 import App from './components/app';
 import allReducers from './reducers';
@@ -11,19 +15,34 @@ import allReducers from './reducers';
 const store = createStore(
 	allReducers, 
 	{
-		authReducer: {authenticated : localStorage.getItem('token') }
+		authReducer: { authenticated: localStorage.getItem('token') }
 	},
-	compose(
-		applyMiddleware(thunk)
-	)
-)
-
+	applyMiddleware(reduxThunk)
+	
+);
 
 ReactDOM.render(
 	(
 		<Provider store={store}>
-			<App />
-		</Provider>
+			<BrowserRouter>
+				<App >
+					<Route path="/" exact component={ LoggedIn }/>
+		          	<Route path="/login" component={ Login }/>
+		          	<Route path="/logged-out" component={ LoggedOut }/>
+		        </ App>
+			</ BrowserRouter>
+		</ Provider>
 	),
 	document.getElementById('root')
 );
+
+
+
+
+
+
+
+
+
+
+

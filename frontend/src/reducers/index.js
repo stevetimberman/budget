@@ -9,7 +9,7 @@ const allReducers = combineReducers({
 	form: formReducer,
     expensesReducer,
     incomesReducer,
-    authReducer
+    authReducer,
 });
 
 export default allReducers;

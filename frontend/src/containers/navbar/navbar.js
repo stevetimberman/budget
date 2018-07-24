@@ -1,4 +1,6 @@
 import React, {Component, Fragment} from 'react';
+import {connect} from 'react-redux';
+import {compose} from 'redux';
 import CommonComponents from '../../components/common';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -12,11 +14,15 @@ export default class Navbar extends Component {
 
 
     render() {
-        
+        let { auth } = this.props
         return (
             <div>
-              	<Nav/>
+              	<Nav auth={auth}/>
             </div>
         )
     }
 }
+
+
+
+

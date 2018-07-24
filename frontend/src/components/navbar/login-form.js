@@ -5,15 +5,18 @@ import CommonComponents from '../common';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { Field, reduxForm } from 'redux-form'
-import password from './password'
-import email from './email'
+import password from '../auth/password'
+import email from '../auth/email'
 import * as fetchUser from '../../actions/auth/login'
+import {withRouter} from 'react-router-dom'
 
 
 //needs a handleSubmit prop
 class LoginForm extends Component {
 	onSubmit = formProps => {
-			this.props.fetchUser(formProps);
+			this.props.fetchUser(formProps, () => {
+      this.props.history.push('/');
+    });
 			console.log(formProps);
 	};
 
@@ -54,7 +57,8 @@ class LoginForm extends Component {
 
 export default compose(
 	connect(null, fetchUser),
-	reduxForm({form: 'LoginForm', })
+	reduxForm({form: 'LoginForm', }),
+	withRouter,
 	)(LoginForm)
 
 

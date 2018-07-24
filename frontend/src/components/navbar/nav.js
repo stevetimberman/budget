@@ -1,10 +1,13 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {compose} from 'redux';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Login from '../../containers/auth/login'
+import LoginForm from './login-form'
+import LogoutButton from './logout-button'
 
 
 const styles = {
@@ -20,8 +23,18 @@ const styles = {
   },
 };
 
+
+
 function Nav(props) {
-  const { classes } = props;
+  const { classes, auth } = props;
+
+  function isLoggedIn(auth) {
+    console.log("Here");
+    if (auth.authenticated){
+      return <LogoutButton />
+    }else {return <LoginForm />}
+  }
+  console.log(auth)
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -29,7 +42,7 @@ function Nav(props) {
           <Typography variant="title" color="inherit" className={classes.flex}>
             Budge
           </Typography>
-          <Login />
+          {isLoggedIn(auth)}
         </Toolbar>
       </AppBar>
     </div>
@@ -37,4 +50,24 @@ function Nav(props) {
 }
 
 
-export default withStyles(styles)(Nav);
+export default compose(
+withStyles(styles)
+)(Nav);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
