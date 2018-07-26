@@ -1,9 +1,11 @@
 import React, {Component, Fragment} from 'react';
 import CommonComponents from '../../components/common';
 import Navbar from '../navbar/navbar';
+import Sidebar from '../sidebar/sidebar';
 import requireAuth from '../../components/auth/require-auth'
 import {connect} from 'react-redux';
 import {compose} from 'redux';
+import Grid from '@material-ui/core/Grid';
 
 
 class LoggedIn extends Component {
@@ -13,8 +15,14 @@ class LoggedIn extends Component {
         
         return (
           <div>
-            <Navbar auth={auth} />
-            <h2>Hello you are logged in!</h2>
+            <Grid container>
+                <Grid item sm={12}>
+                    <Navbar auth={auth} />
+                </Grid>
+                <Grid item sm={4}>
+                    <Sidebar />
+                </Grid>
+            </Grid>
           </div>
         )
     }

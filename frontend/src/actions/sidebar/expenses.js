@@ -5,7 +5,7 @@ export const FETCH_EXPENSES_SUCCESS = "FETCH_EXPENSES_SUCCESS"
 export const FETCH_EXPENSES_ERROR400 = "FETCH_EXPENSES_ERROR400"
 export const FETCH_EXPENSES_ERROR500 = "FETCH_EXPENSES_ERROR500"
 export const FETCH_EXPENSES_FAILURE = "FETCH_EXPENSES_FAILURE"
-export default function fetchExpenses(debate) {
+export function fetchExpenses() {
   return function (dispatch) {
     let url = "http://127.0.0.1:8000/money/api/expense/"
     console.log(url)

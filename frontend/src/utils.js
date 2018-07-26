@@ -4,7 +4,8 @@ export function request(url, options, success, error400, error, failure) {
   let headers = new Headers()
   headers.append("Content-Type", "application/json")
   headers.append("Accept", "application/json")
-  headers.append("Authorization", "Bearer " + localStorage.token)
+  headers.append("Authorization", "JWT " + localStorage.token)
+  console.log("Authorization", "JWT " + localStorage.token)
   options["headers"] = headers
   return fetch(url, options)
     .then(res => {
@@ -22,7 +23,7 @@ export function post(url, options, data, success, error400, error, failure) {
   let headers = new Headers()
   headers.append("Content-Type", "application/json")
   headers.append("Accept", "application/json")
-  headers.append("Authorization", "Bearer " + localStorage.token)
+  headers.append("Authorization", "JWT " + localStorage.token)
   options["headers"] = headers
   options["method"] = 'POST'
   options["body"] = data

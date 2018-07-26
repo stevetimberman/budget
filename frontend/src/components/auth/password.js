@@ -11,9 +11,6 @@ const password = ({
 	}) => (
 	  <TextField
 	  	label='Password'
-	    hintText={label}
-	    floatingLabelText={label}
-	    errorText={touched && error}
 	    {...input}
 	    {...custom}
 	  />

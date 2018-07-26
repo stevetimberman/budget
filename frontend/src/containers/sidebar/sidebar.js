@@ -3,15 +3,18 @@ import {connect} from 'react-redux';
 
 import * as fetchExpenses from "../../actions/sidebar/expenses"
 import CommonComponents from '../../components/common';
-import Tabs from '../../components/sidebar/tabs'
+import Tabs from '../../components/sidebar/tabs';
+import ListSidebar from '../../components/sidebar/list';
 import Paper from '@material-ui/core/Paper';
+
+
 
 
 class Sidebar extends Component {
     componentDidMount() {
     	let { dispatch } = this.props
     	if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
-            dispatch(fetchExpenses())
+            dispatch(fetchExpenses.fetchExpenses());
         }
     }
 
@@ -31,6 +34,7 @@ class Sidebar extends Component {
         return (
             <Paper>
                 	<Tabs />
+                  <ListSidebar items={expenses.data}/>
             </Paper>
         )
     }
