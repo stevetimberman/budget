@@ -5,13 +5,13 @@ import RegisterForm from '../../components/auth/register-form';
 
 
 export default class Register extends Component {
+  
+  render() {
     
-    render() {
-        
-        return (
-          <div>
-              <RegisterForm/>
-          </div>
-        )
-    }
+    return (
+      <div>
+        <RegisterForm/>
+      </div>
+    )
+  }
 }

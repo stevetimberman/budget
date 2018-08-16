@@ -1,4 +1,4 @@
-import { request } from "../../utils"
+import { request } from "../../utils/utils"
 
 export const FETCH_EXPENSES = "FETCH_EXPENSES"
 export const FETCH_EXPENSES_SUCCESS = "FETCH_EXPENSES_SUCCESS"

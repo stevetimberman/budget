@@ -6,10 +6,10 @@ import authReducer from './auth/auth'
 
 
 const allReducers = combineReducers({
-	form: formReducer,
-    expensesReducer,
-    incomesReducer,
-    authReducer,
+  formReducer,
+  expensesReducer,
+  incomesReducer,
+  authReducer,
 });
 
 export default allReducers;

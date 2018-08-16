@@ -12,28 +12,28 @@ import Paper from '@material-ui/core/Paper';
 
 class Sidebar extends Component {
     componentDidMount() {
-    	let { dispatch } = this.props
-    	if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
+      let { dispatch } = this.props
+      if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
             dispatch(fetchExpenses.fetchExpenses());
         }
     }
 
-   	renderLoading() {
-   		return (
-   			<div>
-   				<CommonComponents.CircularProgressBasic/>
-   			</div>
-   			)
-   	}
+     renderLoading() {
+       return (
+         <div>
+           <CommonComponents.CircularProgressBasic/>
+         </div>
+         )
+     }
 
     render() {
-    	let { expenses } = this.props;  
-    	if (expenses.data == undefined){
-    		return this.renderLoading()
-    	}  
+      let { expenses } = this.props;  
+      if (expenses.data == undefined){
+        return this.renderLoading()
+      }  
         return (
             <Paper>
-                	<Tabs />
+                  <Tabs />
                   <ListSidebar items={expenses.data}/>
             </Paper>
         )

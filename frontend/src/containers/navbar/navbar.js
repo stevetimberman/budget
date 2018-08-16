@@ -17,7 +17,7 @@ export default class Navbar extends Component {
         let { auth } = this.props
         return (
             <div>
-              	<Nav auth={auth}/>
+                <Nav auth={auth}/>
             </div>
         )
     }

@@ -5,9 +5,9 @@ import ListItemSidebar from './list-item'
 
 
 function ListSidebar(props) {
-	let { items } = props;
-	let allItems = []
-	console.log(items);
+  let { items } = props;
+  let allItems = []
+  console.log(items);
     items.forEach((item) => {
         let node = (
             <ListItemSidebar key={item.id} data={item}/>
@@ -15,10 +15,10 @@ function ListSidebar(props) {
         allItems.push(node)
     })
 
-	return (
-		<List>{allItems}</List>
-		)
-	
+  return (
+    <List>{allItems}</List>
+    )
+  
 }
 
 export default ListSidebar;

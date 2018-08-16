@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import CommonComponents from '../../components/common';
+import CommonComponents from '../common';
 import * as Action from '../../actions/auth/logout'
 import {compose} from 'redux';
 import {connect} from 'react-redux';
