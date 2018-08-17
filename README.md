@@ -8,11 +8,12 @@ Backend:
 --------------------------------------------------------------------------
 Frontend:
 - React-Redux frontend SPA
-- 
+- Material-ui framework
 --------------------------------------------------------------------------
 Run Locally:
 - Backend
-	- download
+	- install python 3
+	- download django
 	- run: pip3 install -r requirements.txt
 	- run: python3 manage.py runserver
 	- it will inform you the IP address in terminal
@@ -27,6 +28,4 @@ Run Locally:
 	- http://localhost:3000/
 ---------------------------------------------------------------------------
 TODO:
-- Add user reducer
-- Add api endpoint for a specific users expenses and incomes
-- Make budget object in registration
+- connect all components that use modal action

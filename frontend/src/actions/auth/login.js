@@ -1,4 +1,5 @@
 import { postLogin } from "../../utils"
+import jwt from 'jsonwebtoken'
 
 export const FETCH_USER = "FETCH_USER"
 export const FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS"
@@ -13,7 +14,6 @@ export function fetchUser(data, callback) {
       url, {}, data,
       (json) => { 
         dispatch({type: FETCH_USER_SUCCESS, res: json});
-        console.log(json.token)
         localStorage.setItem('token', json.token);
         callback();
       },

@@ -29,18 +29,16 @@ function Nav(props) {
   const { classes, auth } = props;
 
   function isLoggedIn(auth) {
-    console.log("Here");
     if (auth.authenticated){
       return <LogoutButton />
     }else {return <LoginForm />}
   }
-  console.log(auth)
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            Budge
+            Budget
           </Typography>
           {isLoggedIn(auth)}
         </Toolbar>

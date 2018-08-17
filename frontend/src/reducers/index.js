@@ -3,6 +3,8 @@ import { reducer as formReducer } from 'redux-form'
 import expensesReducer from './sidebar/expenses'
 import incomesReducer from './sidebar/incomes'
 import authReducer from './auth/auth'
+import modalReducer from './sidebar/modal'
+
 
 
 const allReducers = combineReducers({
@@ -10,6 +12,7 @@ const allReducers = combineReducers({
     expensesReducer,
     incomesReducer,
     authReducer,
+    modalReducer,
 });
 
 export default allReducers;

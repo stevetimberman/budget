@@ -1,8 +1,18 @@
 from django.contrib import admin
 from money.models import Budget, Expense, Income
 
-admin.site.register(Budget)
+class BudgetAdmin(admin.ModelAdmin):
+    list_display = ('user',)
 
-admin.site.register(Expense)
+class ExpenseAdmin(admin.ModelAdmin):
+    list_display = ('name',)
 
-admin.site.register(Income)
+class IncomeAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    
+
+admin.site.register(Budget, BudgetAdmin)
+
+admin.site.register(Expense, ExpenseAdmin)
+
+admin.site.register(Income, IncomeAdmin)

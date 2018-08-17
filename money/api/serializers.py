@@ -12,12 +12,12 @@ class ExpenseSerializer(serializers.ModelSerializer):
 	"""Serializer for Expense model"""
 	class Meta:
 		model = Expense
-		fields = ('id', 'name', 'description', 'cost', 'budget', 'user')
+		fields = ('id', 'name', 'description', 'cost', 'user')
 
 class IncomeSerializer(serializers.ModelSerializer):
 	"""Serializer for Income model"""
 	class Meta:
 		model = Income
-		fields = ('id','name', 'salary', 'hours', 'pay', 'budget', 'user')
+		fields = ('id','name', 'salary', 'hours', 'pay', 'user')
 
 		

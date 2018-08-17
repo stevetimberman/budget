@@ -1,10 +1,12 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import * as fetchExpenses from "../../actions/sidebar/expenses"
+import * as fetchIncomes from "../../actions/sidebar/incomes"
+
+
 import CommonComponents from '../../components/common';
-import Tabs from '../../components/sidebar/tabs';
-import ListSidebar from '../../components/sidebar/list';
+import TabsSidebar from '../../components/sidebar/tabs';
 import Paper from '@material-ui/core/Paper';
 
 
@@ -12,10 +14,13 @@ import Paper from '@material-ui/core/Paper';
 
 class Sidebar extends Component {
     componentDidMount() {
-    	let { dispatch } = this.props
-    	if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
+        let { dispatch } = this.props
+        if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
             dispatch(fetchExpenses.fetchExpenses());
+        }if (!this.props.incomes.isLoading && this.props.incomes.data === undefined) {
+            dispatch(fetchIncomes.fetchIncomes());
         }
+
     }
 
    	renderLoading() {
@@ -27,14 +32,14 @@ class Sidebar extends Component {
    	}
 
     render() {
-    	let { expenses } = this.props;  
+    	let { expenses, incomes } = this.props;  
     	if (expenses.data == undefined){
-    		return this.renderLoading()
-    	}  
-        return (
+    		return this.renderLoading();
+    	}else if (incomes.data == undefined) {
+        return this.renderLoading();
+      }return (
             <Paper>
-                	<Tabs />
-                  <ListSidebar items={expenses.data}/>
+                	<TabsSidebar expenses={expenses} incomes={incomes}/>
             </Paper>
         )
     }
@@ -43,7 +48,8 @@ class Sidebar extends Component {
 
 function mapStateToProps(state) {
     return {
-        expenses: state.expensesReducer
+        expenses: state.expensesReducer,
+        incomes: state.incomesReducer,
     }
 }
 

@@ -1,4 +1,6 @@
 import { request } from "../../utils"
+import jwt from 'jsonwebtoken'
+
 
 export const FETCH_INCOMES = "FETCH_INCOMES"
 export const FETCH_INCOMES_SUCCESS = "FETCH_INCOMES_SUCCESS"
@@ -7,7 +9,8 @@ export const FETCH_INCOMES_ERROR500 = "FETCH_INCOMES_ERROR500"
 export const FETCH_INCOMES_FAILURE = "FETCH_INCOMES_FAILURE"
 export function fetchIncomes(debate) {
   return function (dispatch) {
-    let url = "http://127.0.0.1:8000/money/api/income/"
+    let user_id = jwt.decode(localStorage.getItem('token')).user_id
+    let url = "http://127.0.0.1:8000/money/api/income/?user=" + user_id
     console.log(url)
     dispatch({type: FETCH_INCOMES})
     return request(

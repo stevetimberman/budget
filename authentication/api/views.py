@@ -4,6 +4,7 @@ from .serializers import UserSerializer
 from rest_framework import generics, viewsets, views, status
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
+from rest_framework.decorators import permission_classes
 
 
 class UserList(viewsets.ModelViewSet):
@@ -23,9 +24,10 @@ class RegisterView(views.APIView):
     """
     Register a new user.
     """
+    
     serializer_class = UserSerializer
     permission_classes = (AllowAny,)
-
+    # @permission_classes([AllowAny])
     def post(self, request, format=None):
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():

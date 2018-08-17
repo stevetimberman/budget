@@ -1,4 +1,3 @@
-import React from 'react'
 import * as userData from "../../actions/auth/login"
 import * as logout from "../../actions/auth/logout"
 
