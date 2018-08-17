@@ -21,6 +21,9 @@ Run Locally:
 	- http://127.0.0.1:8000/money/api/budget/
 		- for budget api (replace budget with expense or income for those apis) 
 
+- Database ui
+	- http://127.0.0.1:8000/admin/
+
 - Frontend
 	- cd frontend
 	- npm start
