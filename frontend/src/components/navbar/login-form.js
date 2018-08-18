@@ -28,7 +28,7 @@ class LoginForm extends Component {
 					<form onSubmit={handleSubmit(this.onSubmit)}>
 						<Field
 				          name="username"
-				          label="Username"
+				          label="username"
 				          component={username}
 				          autoComplete='none'
 				        />
