@@ -1,18 +1,17 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
+import CommonComponents from '../../components/common';
 import Navbar from '../navbar/navbar';
 import * as Action from '../../actions/auth/logout'
 import {compose} from 'redux';
 import {connect} from 'react-redux';
 import { Link } from 'react-router-dom'
-import BudgetRegister from '../budget/budget-register'
-import Grid from '@material-ui/core/Grid';
-
 
 
 class LoggedOut extends Component {
 
   	componentDidMount() {
   		this.props.logOutAction();
+      console.log('hehy there')
   	}
     
     render() {
@@ -20,10 +19,7 @@ class LoggedOut extends Component {
         return (
           <div>
           	<Navbar auth={auth}/>
-            <Grid container>
-              <Grid item sm={12}><Grid container justify={'center'}><h3>Come back soon!</h3></Grid></Grid>
-              <Grid item sm={12}><Grid container justify={'center'}><Link to='/login'> Click here to go back to the Login page! </Link></Grid></Grid>
-             </Grid>
+            <Link to='/login'> Click here to go back to the Login page! </Link>
           </div>
         )
     }

@@ -8,7 +8,6 @@ import logger from 'redux-logger'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Login from './containers/auth/login';
 import LoggedIn from './containers/auth/logged-in';
-import BudgetRegister from './containers/budget/budget-register'
 import LoggedOut from './containers/auth/logged-out';
 
 import App from './components/app';
@@ -30,7 +29,6 @@ ReactDOM.render(
 					<Route path="/" exact component={ LoggedIn }/>
 		          	<Route path="/login" component={ Login }/>
 		          	<Route path="/logged-out" component={ LoggedOut }/>
-		          	<Route path="/register-budget" component={BudgetRegister}/>
 		        </ App>
 			</ BrowserRouter>
 		</ Provider>

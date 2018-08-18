@@ -1,25 +1,16 @@
-import React, {Component} from 'react';
-import {compose} from 'redux';
-import {connect} from 'react-redux';
+import React, {Component, Fragment} from 'react';
 import CommonComponents from '../common';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { Field, reduxForm } from 'redux-form'
 import password from './password'
 import email from './email'
-import username from './userfield'
-import * as postRegister from '../../actions/auth/register'
-import {withRouter} from 'react-router-dom'
-
-
 
 
 //needs a handleSubmit prop
 class RegisterForm extends Component {
 	onSubmit = formProps => {
-		this.props.postRegister(formProps, () => {
-      		this.props.history.push('/register-budget');
-    	});
+			console.log(formProps);
 	}
 
 	render() {
@@ -27,38 +18,27 @@ class RegisterForm extends Component {
 		
 		return (
 			<div>
-				<Grid container spacing={24}>
+				<Grid container>
 					<form onSubmit={handleSubmit(this.onSubmit)}>
-						<Grid item sm={12}>
+						<Grid item>
 							<Field
-					          name="username"
-					          label="Username"
-					          component={username}
-					          autoComplete='none'
-					        />
-						</Grid>
-						<Grid item sm={12}>
-							<Field
-					          name="email"
+					          name="emailField"
 					          label="Email"
 					          component={email}
 					          autoComplete='none'
 					        />
 						</Grid>
-						<Grid item sm={12}>	
+						<Grid item>	
 							<Field
-					          name="password"
+					          name="passwordField"
 					          type='password'
 					          label='Password'
 					          component={password}
 					          autoComplete='none'
 					        />
 					    </Grid>
-					    <h1></h1>
-					    <Grid item sm={12}> 
-					    	<Grid container justify={'flex-end'}>   
-								<CommonComponents.ContainedButton type="submit" >Register</CommonComponents.ContainedButton>
-							</Grid>
+					    <Grid item>    
+							<CommonComponents.ContainedButton type="submit">Submit</CommonComponents.ContainedButton>
 						</Grid>
 					</form>
 					
@@ -68,6 +48,7 @@ class RegisterForm extends Component {
 	}
 }
 
+<<<<<<< HEAD
 
 export default compose(
 connect(null, postRegister),
@@ -76,3 +57,8 @@ withRouter,
 )(RegisterForm)
 
 
+=======
+export default reduxForm({
+  form: 'RegisterForm', // a unique identifier for this form
+})(RegisterForm)
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in

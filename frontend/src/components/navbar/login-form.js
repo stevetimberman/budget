@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {compose} from 'redux';
 import {connect} from 'react-redux';
 import CommonComponents from '../common';
@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { Field, reduxForm } from 'redux-form'
 import password from '../auth/password'
-import username from '../auth/userfield'
+import email from '../auth/email'
 import * as fetchUser from '../../actions/auth/login'
 import {withRouter} from 'react-router-dom'
 
@@ -14,9 +14,10 @@ import {withRouter} from 'react-router-dom'
 //needs a handleSubmit prop
 class LoginForm extends Component {
 	onSubmit = formProps => {
-		this.props.fetchUser(formProps, () => {
-  			this.props.history.push('/');
-		});
+			this.props.fetchUser(formProps, () => {
+      this.props.history.push('/');
+    });
+			console.log(formProps);
 	};
 
 	render() {
@@ -24,22 +25,26 @@ class LoginForm extends Component {
 		
 		return (
 			<div>
-				<Grid container spacing={8}>
+				<Grid container>
 					<form onSubmit={handleSubmit(this.onSubmit)}>
-						<Field
-				          name="username"
-				          label="username"
-				          component={username}
-				          autoComplete='none'
-				        />
-						<Field
-				          name="password"
-				          type='password'
-				          label='Password'
-				          component={password}
-				          autoComplete='none'
-				        />    
-						<CommonComponents.ContainedButton type="submit" color="inherit">Login</CommonComponents.ContainedButton>
+							<Field
+					          name="username"
+					          label="Email"
+					          component={email}
+					          autoComplete='none'
+					        />
+	
+						
+							<Field
+					          name="password"
+					          type='password'
+					          label='Password'
+					          component={password}
+					          autoComplete='none'
+					        />
+					      
+							<CommonComponents.ContainedButton type="submit" color="inherit">Login</CommonComponents.ContainedButton>
+						
 					</form>
 					
 				</Grid>

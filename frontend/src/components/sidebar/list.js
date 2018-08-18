@@ -1,15 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
+import CommonComponents from '../common'
 import List from '@material-ui/core/List';
 import ListItemSidebar from './list-item'
-import Button from '@material-ui/core/Button';
-import AddIcon from '@material-ui/icons/Add';
-import ListItem from '@material-ui/core/ListItem';
-import * as modalActions from '../../actions/sidebar/modal'
-import {connect} from 'react-redux';
-
-class ListSidebar extends Component {
 
 
+function ListSidebar(props) {
+	let { items } = props;
+	let allItems = []
+	console.log(items);
+    items.forEach((item) => {
+        let node = (
+            <ListItemSidebar key={item.id} data={item}/>
+        )
+        allItems.push(node)
+    })
+
+<<<<<<< HEAD
 
 	exp_inc (value, item) {
 		let name_descr = item.name + " - " + item.description ;
@@ -64,3 +70,12 @@ export default connect(null, modalActions)(ListSidebar);
 
 
 
+=======
+	return (
+		<List>{allItems}</List>
+		)
+	
+}
+
+export default ListSidebar;
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in

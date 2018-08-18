@@ -6,10 +6,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 function ListItemSidebar(props) {
 	//needs props data = Expense object
-	let { dataName, dataMoney } = props;
+	let { data } = props;
+	console.log(data);
 	return (
 			<ListItem>
-				<ListItemText  primary={dataMoney} secondary={dataName}/>
+				<ListItemText  primary={data.cost} secondary={data.name}/>
 			</ListItem>
 		)
 

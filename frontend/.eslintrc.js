@@ -1,3 +1,3 @@
 module.exports = {
-    "extends": "rallycoding"
+    "extends": "airbnb"
 };

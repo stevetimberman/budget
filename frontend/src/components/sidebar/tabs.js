@@ -1,13 +1,8 @@
-import  React, { Component } from 'react'
+import React from 'react'
 import CommonComponents from '../common'
-import ListSidebar from './list'
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import {setVal} from '../../actions/sidebar/modal'
-import {connect} from 'react-redux';
 
-const Actions = {setVal}
 
+<<<<<<< HEAD
 
 class TabsSidebar extends Component {
 
@@ -35,11 +30,27 @@ class TabsSidebar extends Component {
 				{value === 0 && <ListSidebar items={expenses.data} value={0}/>}
 				{value === 1 && <ListSidebar items={incomes.data} value={1}/>}
 			</div>
+=======
+function Tabs(props) {
+	return (
+		
+			<CommonComponents.AppBarBasic>
+				<CommonComponents.TabsBasic>
+				
+					<CommonComponents.TabBasic label="Expenses"/>
+					<CommonComponents.TabBasic label="Income"/>
+				
+				</CommonComponents.TabsBasic>
+			</CommonComponents.AppBarBasic>
+		
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 		)
-	}
-
 }
 
+<<<<<<< HEAD
 export default connect(null, Actions)(TabsSidebar)
 
 
+=======
+export default Tabs;
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in

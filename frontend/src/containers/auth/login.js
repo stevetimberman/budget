@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import CommonComponents from '../../components/common';
 import Navbar from '../navbar/navbar';
 import Register from './register'
@@ -16,8 +16,8 @@ class Login extends Component {
 		        <Grid item sm={12}>
 		          <Navbar auth={auth}/>
 		        </Grid>
-				<Grid container justify={'center'}>
-					<Grid item><Register /></Grid>
+				<Grid item sm={12}>
+					<Register />
 		        </Grid>
 		    </Grid>
 		</div>

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { request } from "../../utils/utils"
 import jwt from 'jsonwebtoken'
 
+=======
+import { request } from "../../utils"
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 
 export const FETCH_EXPENSES = "FETCH_EXPENSES"
 export const FETCH_EXPENSES_SUCCESS = "FETCH_EXPENSES_SUCCESS"
@@ -9,8 +13,8 @@ export const FETCH_EXPENSES_ERROR500 = "FETCH_EXPENSES_ERROR500"
 export const FETCH_EXPENSES_FAILURE = "FETCH_EXPENSES_FAILURE"
 export function fetchExpenses() {
   return function (dispatch) {
-    let user_id = jwt.decode(localStorage.getItem('token')).user_id
-    let url = "http://127.0.0.1:8000/money/api/expense/?user=" + user_id
+    let url = "http://127.0.0.1:8000/money/api/expense/"
+    console.log(url)
     dispatch({type: FETCH_EXPENSES})
     return request(
       url, {},
