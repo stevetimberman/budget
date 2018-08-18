@@ -18,11 +18,11 @@ const theme = createMuiTheme({
 
 
 export default ({ children }) => {
-	return (
-		<div>
-			<MuiThemeProvider theme={theme}>
-				{children}
-			</ MuiThemeProvider>
-		</div>
-	);
+  return (
+    <div>
+      <MuiThemeProvider theme={theme}>
+        {children}
+      </ MuiThemeProvider>
+    </div>
+  );
 };

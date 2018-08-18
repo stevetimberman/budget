@@ -1,4 +1,4 @@
-import { post } from "../../utils"
+import { post } from "../../utils/utils"
 import jwt from 'jsonwebtoken'
 
 export const REGISTER_BUDGET = "REGISTER_BUDGET"

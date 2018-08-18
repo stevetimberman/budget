@@ -39,27 +39,27 @@ Components:
 */
 const CommonComponents = {
 
-	ContainedButton: function ContainedButton(props) {
-		return (
-			<Button variant="contained" color={props.color} disabled={props.disabled} type={props.type}>
-				{props.children}
-      		</Button>
-		)
-		
-	},
+  ContainedButton: function ContainedButton(props) {
+    return (
+      <Button variant="contained" color={props.color} disabled={props.disabled} type={props.type}>
+        {props.children}
+          </Button>
+    )
+    
+  },
 
-	//props: label
-	ChipBasic: function ChipBasic(props) {
-		return (
-			<Chip label={props.label} />
-		)
-		
-	},
+  //props: label
+  ChipBasic: function ChipBasic(props) {
+    return (
+      <Chip label={props.label} />
+    )
+    
+  },
 
-	//props: required, label, type, fullWidth, multiline
-	TextfieldBasic: function TextfieldBasic(props) {
-		return (
-			<TextField
+  //props: required, label, type, fullWidth, multiline
+  TextfieldBasic: function TextfieldBasic(props) {
+    return (
+      <TextField
           label={props.label}
           required={props.required}
           type={props.type}
@@ -70,91 +70,91 @@ const CommonComponents = {
           // onChange={this.handleChange('name')}
           margin="normal"
         />
-		)
-		
-	},
+    )
+    
+  },
 
-	//props: color, badgeContent
-	BadgeBasic: function BadgeBasic(props) {
-		return (
-			<Badge color={props.color} badgeContent={props.badgeContent} >
-        		{props.children}
-      		</Badge>
-		)
-		
-	},
+  //props: color, badgeContent
+  BadgeBasic: function BadgeBasic(props) {
+    return (
+      <Badge color={props.color} badgeContent={props.badgeContent} >
+            {props.children}
+          </Badge>
+    )
+    
+  },
 
-	//props: color, badgeContent
-	ListBasic: function ListBasic(props) {
-		return (
-			<List >
-        		{props.children}
-      		</List>
-		)
-		
-	},
+  //props: color, badgeContent
+  ListBasic: function ListBasic(props) {
+    return (
+      <List >
+            {props.children}
+          </List>
+    )
+    
+  },
 
-	//props: color, ariaLabel
-	IconButtonBasic: function IconButtonBasic(props) {
-		return (
-			<IconButton color="inherit" aria-label={props.ariaLabel}>
-            	{props.children}
-          	</IconButton>
-		)
-		
-	},
+  //props: color, ariaLabel
+  IconButtonBasic: function IconButtonBasic(props) {
+    return (
+      <IconButton color="inherit" aria-label={props.ariaLabel}>
+              {props.children}
+            </IconButton>
+    )
+    
+  },
 
-	//props: title
-	TypographyBasic: function TypographyBasic(props) {
-		return (
-			<Typography variant={props.title} color="inherit">{props.children}</Typography>
-		)
-		
-	},	
+  //props: title
+  TypographyBasic: function TypographyBasic(props) {
+    return (
+      <Typography variant={props.title} color="inherit">{props.children}</Typography>
+    )
+    
+  },  
 
 
-	AppBarBasic: function AppBarBasic(props) {
-		return (
-			<AppBar position="static">
-				<Toolbar>
-					{props.children}
-				</Toolbar>
-			</AppBar>
-		)
-		
-	},
+  AppBarBasic: function AppBarBasic(props) {
+    return (
+      <AppBar position="static">
+        <Toolbar>
+          {props.children}
+        </Toolbar>
+      </AppBar>
+    )
+    
+  },
 
-	DrawerBasic: function DrawerBasic(props) {
-		return (
-			<Drawer
-		        variant="permanent"
-		        anchor={props.anchor}
-		    >
-		    	{props.children}
-		    </Drawer>
-		)
-		
-	},
+  DrawerBasic: function DrawerBasic(props) {
+    return (
+      <Drawer
+            variant="permanent"
+            anchor={props.anchor}
+        >
+          {props.children}
+        </Drawer>
+    )
+    
+  },
 
-	TabsBasic: function TabsBasic(props) {
-		return (
-			<Tabs value={0} indicatorColor="primary" textColor="primary">{props.children}</Tabs>
-		)
-		
-	},
+  TabsBasic: function TabsBasic(props) {
+    return (
+      <Tabs value={0} indicatorColor="primary" textColor="primary">{props.children}</Tabs>
+    )
+    
+  },
 
-	TabBasic: function TabBasic(props) {
-		return (
-			<Tab label={props.label} />
-		)
-		
-	},
+  TabBasic: function TabBasic(props) {
+    return (
+      <Tab label={props.label} />
+    )
+    
+  },
 
-	CircularProgressBasic: function CircularProgressBasic(props) {
-		return (
-			<CircularProgress size={props.size} color={props.color} thickness={props.thickness} />		)
-		
-	},
+  CircularProgressBasic: function CircularProgressBasic(props) {
+    return (
+      <CircularProgress size={props.size} color={props.color} thickness={props.thickness} />    )
+    
+  },
 
 }
 

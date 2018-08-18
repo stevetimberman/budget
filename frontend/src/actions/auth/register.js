@@ -1,4 +1,4 @@
-import { postLogin } from "../../utils"
+import { postLogin } from "../../utils/utils"
 import * as action from './login'
 import jwt from 'jsonwebtoken'
 

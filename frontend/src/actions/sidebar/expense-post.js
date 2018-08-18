@@ -1,4 +1,4 @@
-import { post } from "../../utils"
+import { post } from "../../utils/utils"
 import jwt from 'jsonwebtoken'
 
 export const POST_EXPENSE = "POST_EXPENSE"

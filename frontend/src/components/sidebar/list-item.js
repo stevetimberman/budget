@@ -12,6 +12,7 @@ function ListItemSidebar(props) {
 				<ListItemText  primary={dataMoney} secondary={dataName}/>
 			</ListItem>
 		)
+
 }
 
 export default ListItemSidebar;

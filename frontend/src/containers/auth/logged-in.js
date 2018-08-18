@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from '../navbar/navbar';
 import Sidebar from '../sidebar/sidebar';
-import requireAuth from '../../components/auth/require-auth'
+import ProtectedComponent from '../../components/auth/require-auth'
 import {connect} from 'react-redux';
 import {compose} from 'redux';
 import Grid from '@material-ui/core/Grid';
@@ -10,7 +10,8 @@ import jwt from 'jsonwebtoken'
 
 
 class LoggedIn extends Component {
-    
+  
+
     render() {
     	let { auth } = this.props;
         let username = jwt.decode(localStorage.getItem('token')).username
@@ -38,9 +39,10 @@ function mapStateToProps(state) {
     return {
         auth: state.authReducer,
     }
+
 }
 
-export default compose(requireAuth, connect(mapStateToProps))(LoggedIn)
+export default compose(ProtectedComponent, connect(mapStateToProps))(LoggedIn)
 
 
 

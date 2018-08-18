@@ -7,8 +7,10 @@ import Grid from '@material-ui/core/Grid';
 
 
 export default class Register extends Component {
+  
+  render() {
     
-    render() {
+
         
         return (
             <Grid container justify={'center'}>

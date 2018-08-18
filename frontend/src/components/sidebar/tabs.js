@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 
 const Actions = {setVal}
 
+
 class TabsSidebar extends Component {
 
 	state = {
@@ -40,7 +41,5 @@ class TabsSidebar extends Component {
 }
 
 export default connect(null, Actions)(TabsSidebar)
-
-
 
 

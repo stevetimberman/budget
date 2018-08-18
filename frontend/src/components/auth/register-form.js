@@ -68,16 +68,11 @@ class RegisterForm extends Component {
 	}
 }
 
+
 export default compose(
 connect(null, postRegister),
 reduxForm({form: 'RegisterForm', }),
 withRouter,
 )(RegisterForm)
-
-
-
-
-
-
 
 

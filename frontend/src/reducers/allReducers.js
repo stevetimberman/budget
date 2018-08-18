@@ -8,7 +8,7 @@ import modalReducer from './sidebar/modal'
 
 
 const allReducers = combineReducers({
-	form: formReducer,
+	formReducer,
     expensesReducer,
     incomesReducer,
     authReducer,

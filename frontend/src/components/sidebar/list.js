@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 class ListSidebar extends Component {
 
 
+
 	exp_inc (value, item) {
 		let name_descr = item.name + " - " + item.description ;
 		if (value == 0){
@@ -62,48 +63,4 @@ export default connect(null, modalActions)(ListSidebar);
 
 
 
-
-
-// function ListSidebar(props) {
-// 	let { items, value } = props;
-// 	let allItems = []
-
-// 	let fabStyle = {
-// 		position: 'absolute',
-// 		bottom: 4,
-// 		right: 2,
-// 	}
-
-// 	function exp_inc (value, item) {
-// 		if (value == 0){
-// 			return <ListItemSidebar key={item.id} dataName={item.name} dataMoney={item.cost}/>
-// 		} else {
-// 			return <ListItemSidebar key={item.id} dataName={item.name} dataMoney={item.pay}/>
-// 		}
-// 	}
-
-// 	function handleClick (props) {
-// 		this.props.openModal();
-// 	}
-
-// 	console.log(items);
-//     items.forEach((item) => {
-//         let node = (
-//             exp_inc(value, item)
-//         )
-//         allItems.push(node)
-//     })
-
-// 	return (
-// 		<List>
-// 			{allItems}
-// 			<ListItem>
-// 				<Button onClick={handleClick} variant="fab" color="secondary" style={fabStyle} >
-// 					<AddIcon />
-// 				</Button>
-// 			</ListItem>
-// 		</List>
-// 		)
-	
-// }
 

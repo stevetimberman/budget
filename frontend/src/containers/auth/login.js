@@ -7,8 +7,6 @@ import {connect} from 'react-redux';
 import {compose} from 'redux';
 
 class Login extends Component {
-
-
     
     render() {
     	let { auth } = this.props
@@ -25,12 +23,13 @@ class Login extends Component {
 		</div>
         )
     }
+
 }
 
 function mapStateToProps(state) {
-    return {
-        auth: state.authReducer
-    }
+  return {
+    auth: state.authReducer
+  }
 }
 
 export default connect(mapStateToProps)(Login)

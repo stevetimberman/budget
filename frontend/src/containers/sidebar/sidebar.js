@@ -14,8 +14,9 @@ import Paper from '@material-ui/core/Paper';
 
 class Sidebar extends Component {
     componentDidMount() {
-        let { dispatch } = this.props
-        if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
+
+      let { dispatch } = this.props
+      if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
             dispatch(fetchExpenses.fetchExpenses());
         }if (!this.props.incomes.isLoading && this.props.incomes.data === undefined) {
             dispatch(fetchIncomes.fetchIncomes());
@@ -23,13 +24,13 @@ class Sidebar extends Component {
 
     }
 
-   	renderLoading() {
-   		return (
-   			<div>
-   				<CommonComponents.CircularProgressBasic/>
-   			</div>
-   			)
-   	}
+     renderLoading() {
+       return (
+         <div>
+           <CommonComponents.CircularProgressBasic/>
+         </div>
+         )
+     }
 
     render() {
     	let { expenses, incomes } = this.props;  
@@ -40,6 +41,7 @@ class Sidebar extends Component {
       }return (
             <Paper>
                 	<TabsSidebar expenses={expenses} incomes={incomes}/>
+
             </Paper>
         )
     }
