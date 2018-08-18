@@ -7,8 +7,11 @@
     "@material-ui/icons": "^1.1.0",
     "axios": "^0.18.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "isomorphic-fetch": "^2.2.1",
     "jsonwebtoken": "^8.3.0",
+=======
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 =======
 >>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
     "material-ui": "^1.0.0-beta.47",

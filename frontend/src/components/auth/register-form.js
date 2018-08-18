@@ -49,6 +49,7 @@ class RegisterForm extends Component {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default compose(
 connect(null, postRegister),
@@ -57,6 +58,11 @@ withRouter,
 )(RegisterForm)
 
 
+=======
+export default reduxForm({
+  form: 'RegisterForm', // a unique identifier for this form
+})(RegisterForm)
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 =======
 export default reduxForm({
   form: 'RegisterForm', // a unique identifier for this form

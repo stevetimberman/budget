@@ -13,9 +13,14 @@ import Paper from '@material-ui/core/Paper';
 class Sidebar extends Component {
     componentDidMount() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       let { dispatch } = this.props
       if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
+=======
+    	let { dispatch } = this.props
+    	if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 =======
     	let { dispatch } = this.props
     	if (!this.props.expenses.isLoading && this.props.expenses.data === undefined ) {
@@ -40,8 +45,13 @@ class Sidebar extends Component {
         return (
             <Paper>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 	<TabsSidebar expenses={expenses} incomes={incomes}/>
 
+=======
+                	<Tabs />
+                  <ListSidebar items={expenses.data}/>
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 =======
                 	<Tabs />
                   <ListSidebar items={expenses.data}/>

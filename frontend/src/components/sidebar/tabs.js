@@ -1,6 +1,7 @@
 import React from 'react'
 import CommonComponents from '../common'
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -31,6 +32,9 @@ class TabsSidebar extends Component {
 				{value === 1 && <ListSidebar items={incomes.data} value={1}/>}
 			</div>
 =======
+=======
+
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 function Tabs(props) {
 	return (
 		
@@ -43,6 +47,7 @@ function Tabs(props) {
 				</CommonComponents.TabsBasic>
 			</CommonComponents.AppBarBasic>
 		
+<<<<<<< HEAD
 >>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 		)
 }
@@ -52,5 +57,11 @@ export default connect(null, Actions)(TabsSidebar)
 
 
 =======
+export default Tabs;
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
+=======
+		)
+}
+
 export default Tabs;
 >>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in

@@ -9,8 +9,12 @@ import Grid from '@material-ui/core/Grid';
 
 
 class LoggedIn extends Component {
+<<<<<<< HEAD
   
 
+=======
+    
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
     render() {
     	let { auth } = this.props
         

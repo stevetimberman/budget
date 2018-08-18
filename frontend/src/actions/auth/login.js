@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { postLogin } from "../../utils/utils"
 import jwt from 'jsonwebtoken'
 =======
 import { postLogin } from "../../utils"
 >>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 
+=======
+import { postLogin } from "../../utils"
+>>>>>>> parent of 35ef6c7... budget form, modal, and expense form implemented... bugs exist, loads last users expenses and incomes until first reload when a user signs in
 
 export const FETCH_USER = "FETCH_USER"
 export const FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS"
