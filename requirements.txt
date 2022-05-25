@@ -15,7 +15,7 @@ itypes==1.1.0
 Jinja2==2.10
 Markdown==2.6.9
 MarkupSafe==1.0
-PyJWT==1.6.4
+PyJWT==2.4.0
 pytz==2017.3
 requests==2.19.1
 six==1.11.0
